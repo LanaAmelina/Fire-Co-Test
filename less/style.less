@@ -1,36 +1,65 @@
 @nice-red: #ce492b;
-@nav-bg: red;
 @pre-nav-bg: lightgrey;
 @black-color: #000;
+@black-light: @black-color + #111;
 @grey-tr: #757575;
 @button-grey: #333333;
 @white-bg: #fff;
 @light-red: @nice-red + #111;
+@grey-bd: #f5f5f5;
 
 body {
 	color: @grey-tr;
 }
 
+hr {  
+	border-color: @black-color;
+    max-width: 84px;
+}
+nav {
+	background-color: @white-bg;
+	height: 80px;
+}
+h3 {
+  	color: @black-color;
+  	text-transform: uppercase;
+  	padding-bottom: 10px;
+  }
+h4 {
+		color: @black-color;
+		text-transform: uppercase;
+	}
+
 #pre-header {
   background-color: @pre-nav-bg;
 }
+
+#navbar {
+	background-color: @white-bg;
+	padding-top: 15px;
+}
+
+.carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
 
 #main-slider {
   height: 400px;
 }
 
 #main-features {
-	padding-top: 30px;
+  padding-top: 30px;
   background-color: @white-bg;
   height: 500px;
   .fa-circle {
   	color: @nice-red;
   }
-  h3 {
-  	color: @black-color;
-  	text-transform: uppercase;
-  	padding-bottom: 10px;
-  }
+}
+ 
+.list-group {
+	height: 50px;
 }
 .button-black {
   	background-color: @button-grey;
@@ -43,19 +72,13 @@ body {
     font-size: 14px;
     margin: 10px 2px;
     cursor: pointer;
-} 
-.list-group {
-	height: 50px;
-	h4 {
-		color: @black-color;
-		text-transform: uppercase;
-	}
 }
 
 .feature-icon {
 	float: left;
 	margin-right: 10px;
 } 
+
 #second-features {
 	padding-top: 50px;
     background-color: @nice-red;
@@ -67,25 +90,56 @@ body {
     text-transform: uppercase;
   }
 }
-.media  h4, p{
+
+.media  h4{
 	padding-left: 10px;
 }
 
-#navbar {
+#offer-block {
+	padding-top: 30px;
 	background-color: @white-bg;
-	padding-top: 15px;
+	height: 420px;
 }
-
-nav {
-	background-color: @white-bg;
-	height: 80px;
+#offers .media:hover .icon-md {
+    border-radius: 10px;
+    background-color: @button-grey;
 }
-
-.carousel-inner img {
-      width: 100%; /* Set width to 100% */
-      margin: auto;
-      min-height:200px;
-  }
-
-
+.icon-md {
+    color: @white-bg;
+    margin-right: 10px;
+    background-color: @nice-red;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+#team-block{
+	padding-top: 50px;
+    background-color: @grey-bd;
+    height: 640px;
+}
+.ic-soc {
+  display: none;
+  border-radius: 10%;
+  box-shadow: 0px 0px 2px @grey-tr;
+}
+#bottom {
+	padding-top: 50px;
+    background-color: @black-light;
+    height: 340px;
+    h4 {
+    	color: @white-bg;
+    }
+}
+.btn-news {
+	background-color: @button-grey;
+}
+#footer {
+	padding-top: 5px;
+	background-color: @black-color;
+	height: 30px;
+}
 
