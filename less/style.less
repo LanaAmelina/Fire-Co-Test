@@ -1,49 +1,94 @@
 @nice-red: #ce492b;
-@pre-nav-bg: lightgrey;
-@black-color: #000;
-@black-light: @black-color + #111;
-@grey-tr: #757575;
+@grey: #f3f3f3;
+@grey-link: #757575;
+@black: #000;
+@black-light: @black + #222;
+@gray-icon: #757575;
 @button-grey: #333333;
-@white-bg: #fff;
+@white: #fff;
 @light-red: @nice-red + #111;
-@grey-bd: #f5f5f5;
+@grey-light: @grey + #020202;
 
 body {
-	color: @grey-tr;
+	color: @gray-icon;
 }
 
 hr {  
-	border-color: @black-color;
-    max-width: 84px;
+	border-color: @black;
+  max-width: 84px;
 }
-nav {
-	background-color: @white-bg;
-	height: 80px;
-}
+
 h3 {
-  	color: @black-color;
-  	text-transform: uppercase;
-  	padding-bottom: 10px;
-  }
+ color: @black;
+ text-transform: uppercase;
+ padding-bottom: 10px;
+}
+
 h4 {
-		color: @black-color;
-		text-transform: uppercase;
-	}
+  color: @black;
+  text-transform: uppercase;
+}
+
+nav {
+	height: 70px;
+}
 
 #pre-header {
-  background-color: @pre-nav-bg;
+  background-color: @grey;
+  height: 38px;
+  // .row {
+  //  margin-top: 10px;
+  // }
+}
+
+#contacts {
+	float: right;
+  line-height: 2.5;
+  li {
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid #000000;
+
+  }
+  height: 38px;
+  a {
+    color: @grey-link;
+  }
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.navbar-right {
+  margin: 0;
 }
 
 #navbar {
-	background-color: @white-bg;
-	padding-top: 15px;
+	background-color: @white;
+	height: 70px;
+	ul {
+		text-transform: uppercase;
+	}
+	a {
+		color: @black;
+	}
+	a:hover {
+   background-color: @white;
+   color: @nice-red;
+ } 
+ .active > a {
+  background-color: @white;
+  color: @nice-red;
+}
 }
 
 .carousel-inner img {
-      width: 100%; /* Set width to 100% */
-      margin: auto;
-      min-height:200px;
-  }
+  width: 100%; /* Set width to 100% */
+  margin: auto;
+  min-height:200px;
+}
 
 #main-slider {
   height: 400px;
@@ -51,27 +96,30 @@ h4 {
 
 #main-features {
   padding-top: 30px;
-  background-color: @white-bg;
+  background-color: @white;
   height: 500px;
   .fa-circle {
   	color: @nice-red;
   }
 }
- 
+
 .list-group {
 	height: 50px;
 }
 .button-black {
-  	background-color: @button-grey;
-    border: none;
-    color: @white-bg;
-    padding: 16px 32px;
-    text-align: center;
-    text-transform: uppercase;
-    display: inline-block;
-    font-size: 14px;
-    margin: 10px 2px;
-    cursor: pointer;
+  &:hover {
+    color: @nice-red;
+  }
+  background-color: @button-grey;
+  border: none;
+  color: @white;
+  padding: 16px 32px;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 14px;
+  margin: 10px 2px;
+  cursor: pointer;
 }
 
 .feature-icon {
@@ -81,65 +129,70 @@ h4 {
 
 #second-features {
 	padding-top: 50px;
-    background-color: @nice-red;
-    height: 220px;
+  background-color: @nice-red;
+  height: 220px;
   i, p  {
-  	color: @white-bg;
-  }h4 {
-  	color: @white-bg;
-    text-transform: uppercase;
-  }
-}
+  	color: @white;
+    }h4 {
+     color: @white;
+     text-transform: uppercase;
+   }
+ }
 
-.media  h4{
-	padding-left: 10px;
-}
+ .media  h4{
+   padding-left: 10px;
+ }
 
-#offer-block {
-	padding-top: 30px;
-	background-color: @white-bg;
-	height: 420px;
-}
-#offers .media:hover .icon-md {
-    border-radius: 10px;
-    background-color: @button-grey;
+ #offer-block {
+   padding-top: 30px;
+   background-color: @white;
+   height: 420px;
+ }
+ #offers .media:hover .icon-md {
+  border-radius: 10px;
+  background-color: @button-grey;
 }
 .icon-md {
-    color: @white-bg;
-    margin-right: 10px;
-    background-color: @nice-red;
-    text-align: center;
-    display: block;
-    border-radius: 50%;
-    -webkit-transition: 500ms;
-    -moz-transition: 500ms;
-    -o-transition: 500ms;
-    transition: 500ms;
+  color: @white;
+  margin-right: 10px;
+  background-color: @nice-red;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 #team-block{
 	padding-top: 50px;
-    background-color: @grey-bd;
-    height: 640px;
+  background-color: @grey-light;
+  height: 640px;
 }
 .ic-soc {
   display: none;
   border-radius: 10%;
-  box-shadow: 0px 0px 2px @grey-tr;
+  box-shadow: 0px 0px 2px @gray-icon;
 }
 #bottom {
 	padding-top: 50px;
-    background-color: @black-light;
-    height: 340px;
-    h4 {
-    	color: @white-bg;
-    }
+  background-color: @black-light;
+  height: 340px;
+  h4 {
+   color: @white;
+ }
 }
+
+
 .btn-news {
-	background-color: @button-grey;
+  &:hover {
+    color: @nice-red;
+  }
 }
+
 #footer {
 	padding-top: 5px;
-	background-color: @black-color;
+	background-color: @black;
 	height: 30px;
 }
 
