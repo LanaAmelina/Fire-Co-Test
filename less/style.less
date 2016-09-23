@@ -11,6 +11,7 @@
 
 body {
 	color: @gray-icon;
+  float: right;
 }
 
 hr {  
@@ -36,24 +37,30 @@ nav {
 #pre-header {
   background-color: @grey;
   height: 38px;
-  // .row {
-  //  margin-top: 10px;
-  // }
 }
 
 #contacts {
 	float: right;
   line-height: 2.5;
+  height: 38px;
+  margin-bottom: 0px;
   li {
     display: inline;
     padding-left: 10px;
     padding-right: 10px;
     border-left: 1px solid #000000;
-
+    font-size: 0.687em;
   }
-  height: 38px;
   a {
     color: @grey-link;
+  }
+  @media screen {
+    @media (max-width: 480px) {
+      padding-left: 5px;
+      padding-right: 5px;
+      
+    }
+    
   }
 }
 
@@ -67,7 +74,7 @@ nav {
 
 #navbar {
 	background-color: @white;
-	height: 70px;
+	height: auto;
 	ul {
 		text-transform: uppercase;
 	}
@@ -85,7 +92,7 @@ nav {
 }
 
 .carousel-inner img {
-  width: 100%; /* Set width to 100% */
+  width: 100%;
   margin: auto;
   min-height:200px;
 }
@@ -96,8 +103,10 @@ nav {
 
 #main-features {
   padding-top: 30px;
+  padding-bottom: 30px;
   background-color: @white;
-  height: 500px;
+  height: auto;
+  width: 100%;
   .fa-circle {
   	color: @nice-red;
   }
@@ -105,6 +114,8 @@ nav {
 
 .list-group {
 	height: 50px;
+  height: auto;
+  width: 100%;
 }
 .button-black {
   &:hover {
@@ -128,9 +139,11 @@ nav {
 } 
 
 #second-features {
-	padding-top: 50px;
+	padding-top: 40px;
+  padding-bottom: 30px;
   background-color: @nice-red;
-  height: 220px;
+  height: auto;
+  width: 100%;
   i, p  {
   	color: @white;
     }h4 {
@@ -145,8 +158,10 @@ nav {
 
  #offer-block {
    padding-top: 30px;
+   padding-bottom: 30px;
    background-color: @white;
-   height: 420px;
+   height: auto;
+   width: 100%;
  }
  #offers .media:hover .icon-md {
   border-radius: 10px;
@@ -165,24 +180,29 @@ nav {
   transition: 500ms;
 }
 #team-block{
-	padding-top: 50px;
+	padding-top: 30px;
+  padding-bottom: 30px;
   background-color: @grey-light;
-  height: 640px;
+  height: auto;
+  width: 100%;
 }
+
 .ic-soc {
   display: none;
   border-radius: 10%;
   box-shadow: 0px 0px 2px @gray-icon;
 }
+
 #bottom {
 	padding-top: 50px;
+  padding-bottom: 30px;
   background-color: @black-light;
-  height: 340px;
+  height: auto;
+  width: 100%;
   h4 {
    color: @white;
  }
 }
-
 
 .btn-news {
   &:hover {
